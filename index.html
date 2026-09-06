@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>365 Fitness | Gym & Fitness Centre in Budaun</title>
+  <meta name="description" content="365 Fitness is a gym and fitness centre on Station Road, Budaun, offering gym training, personal trainer options and a weight gain programme." />
+  <meta name="keywords" content="365 Fitness, Gym in Budaun, Gym in Station Road Budaun, Fitness Centre Budaun, Personal Trainer Budaun, Weight Gain Programme Budaun" />
+
+  <!-- Google Fonts: Oswald (Bold Athletic Display) + Inter (Clean Modern Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            blackPrimary: '#0A0A0A',
+            blackSecondary: '#121212',
+            blackCard: '#171717',
+            blackBorder: '#262626',
+            yellowAccent: '#F5C400',
+            yellowHover: '#DDAF00',
+            mutedText: '#A8A8A8',
+            offWhite: '#F4F4F4',
+          },
+          fontFamily: {
+            oswald: ['Oswald', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0A0A0A;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #262626;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #F5C400;
+    }
+    .hero-mask {
+      background: linear-gradient(180deg, rgba(10,10,10,0.65) 0%, rgba(10,10,10,0.92) 80%, #0A0A0A 100%);
+    }
+    .yellow-glow-subtle {
+      box-shadow: 0 0 25px -5px rgba(245, 196, 0, 0.15);
+    }
+  </style>
+</head>
+<body class="bg-blackPrimary text-white font-sans antialiased selection:bg-yellowAccent selection:text-black pb-20 md:pb-0">
+
+  <!-- ================================================== -->
+  <!-- 1. STICKY HEADER -->
+  <!-- ================================================== -->
+  <header class="sticky top-0 z-50 bg-[#0A0A0A]/95 backdrop-blur-md border-b border-blackBorder transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="#hero" class="flex items-center space-x-2 group focus:outline-none">
+          <div class="w-10 h-10 bg-yellowAccent text-black flex items-center justify-center font-oswald text-xl font-bold tracking-tighter transition-transform group-hover:scale-95">
+            365
+          </div>
+          <div class="flex flex-col">
+            <span class="font-oswald text-2xl tracking-wider font-bold text-white uppercase group-hover:text-yellowAccent transition-colors">
+              365 FITNESS
+            </span>
+            <span class="text-[10px] tracking-widest text-mutedText uppercase -mt-1 font-medium">Budaun • Est. 2020</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center space-x-8">
+          <a href="#hero" class="text-sm uppercase tracking-wider font-medium text-white hover:text-yellowAccent transition-colors">Home</a>
+          <a href="#about" class="text-sm uppercase tracking-wider font-medium text-mutedText hover:text-yellowAccent transition-colors">About</a>
+          <a href="#services" class="text-sm uppercase tracking-wider font-medium text-mutedText hover:text-yellowAccent transition-colors">Training &amp; Services</a>
+          <a href="#schedule" class="text-sm uppercase tracking-wider font-medium text-mutedText hover:text-yellowAccent transition-colors">Hours</a>
+          <a href="#reviews" class="text-sm uppercase tracking-wider font-medium text-mutedText hover:text-yellowAccent transition-colors">Reviews</a>
+          <a href="#gallery" class="text-sm uppercase tracking-wider font-medium text-mutedText hover:text-yellowAccent transition-colors">Gallery</a>
+          <a href="#location" class="text-sm uppercase tracking-wider font-medium text-mutedText hover:text-yellowAccent transition-colors">Location</a>
+        </nav>
+
+        <!-- CTA Header Button -->
+        <div class="hidden sm:flex items-center space-x-4">
+          <a href="#contact" class="bg-yellowAccent text-black font-oswald text-base tracking-wider uppercase font-semibold px-6 py-2.5 transition-all duration-200 hover:bg-yellowHover hover:shadow-lg hover:shadow-yellowAccent/10">
+            JOIN / ENQUIRE
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuBtn" type="button" aria-label="Toggle navigation" class="lg:hidden text-white p-2 focus:outline-none focus:text-yellowAccent">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="burgerIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"></path>
+            <path id="closeIcon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-blackSecondary border-b border-blackBorder px-4 pt-3 pb-6 space-y-3">
+      <a href="#hero" class="mobile-nav-link block py-2 text-base uppercase font-medium text-white border-b border-blackBorder/40">Home</a>
+      <a href="#about" class="mobile-nav-link block py-2 text-base uppercase font-medium text-mutedText border-b border-blackBorder/40">About</a>
+      <a href="#services" class="mobile-nav-link block py-2 text-base uppercase font-medium text-mutedText border-b border-blackBorder/40">Training &amp; Services</a>
+      <a href="#schedule" class="mobile-nav-link block py-2 text-base uppercase font-medium text-mutedText border-b border-blackBorder/40">Hours</a>
+      <a href="#reviews" class="mobile-nav-link block py-2 text-base uppercase font-medium text-mutedText border-b border-blackBorder/40">Reviews</a>
+      <a href="#gallery" class="mobile-nav-link block py-2 text-base uppercase font-medium text-mutedText border-b border-blackBorder/40">Gallery</a>
+      <a href="#location" class="mobile-nav-link block py-2 text-base uppercase font-medium text-mutedText border-b border-blackBorder/40">Location</a>
+      <a href="#contact" class="mobile-nav-link block py-3 text-center bg-yellowAccent text-black font-oswald text-base tracking-wider uppercase font-semibold mt-4">
+        JOIN / ENQUIRE
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================================================== -->
+    <!-- 2. HERO SECTION -->
+    <!-- ================================================== -->
+    <section id="hero" class="relative min-h-[90vh] flex items-center justify-center bg-blackPrimary overflow-hidden">
+      <!-- High contrast authentic fitness background -->
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1920&auto=format&fit=crop" 
+          alt="Athletic strength training gym environment" 
+          class="w-full h-full object-cover object-center filter grayscale contrast-125 opacity-35"
+        />
+        <div class="absolute inset-0 hero-mask"></div>
+      </div>
+
+      <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center md:text-left">
+        <div class="max-w-3xl">
+          
+          <!-- Verified Establishment Badge -->
+          <div class="inline-flex items-center space-x-3 px-3.5 py-1.5 bg-blackSecondary/80 border border-yellowAccent/40 mb-6 backdrop-blur-sm">
+            <span class="w-2 h-2 rounded-full bg-yellowAccent animate-pulse"></span>
+            <span class="font-mono text-xs uppercase tracking-widest text-yellowAccent font-medium">
+              EST. 2020 • STATION ROAD, BUDAUN
+            </span>
+          </div>
+
+          <!-- Bold Typography Headline -->
+          <h1 class="font-oswald text-5xl sm:text-7xl lg:text-8xl font-bold uppercase tracking-tight leading-[0.95] text-white">
+            TRAIN <span class="text-yellowAccent">HARD.</span><br />
+            BUILD <span class="text-yellowAccent">STRONG.</span>
+          </h1>
+
+          <!-- Verified Factual Supporting Copy -->
+          <p class="mt-6 text-lg sm:text-xl text-mutedText leading-relaxed max-w-2xl font-normal">
+            A focused training environment built for people who are serious about becoming stronger, fitter, and more consistent. Located at Station Road in Budaun.
+          </p>
+
+          <!-- CTAs -->
+          <div class="mt-9 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+            <a href="#contact" class="inline-flex items-center justify-center bg-yellowAccent text-black font-oswald text-lg font-bold tracking-wider uppercase px-8 py-4 hover:bg-yellowHover transition duration-200 shadow-lg shadow-yellowAccent/15">
+              START YOUR FITNESS JOURNEY
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </a>
+            <a href="#services" class="inline-flex items-center justify-center border-2 border-white/20 hover:border-yellowAccent text-white hover:text-yellowAccent font-oswald text-lg font-semibold tracking-wider uppercase px-8 py-4 transition duration-200">
+              EXPLORE TRAINING
+            </a>
+          </div>
+
+          <!-- Verified Quick Info Sub-bar -->
+          <div class="mt-12 pt-6 border-t border-blackBorder/60 flex flex-wrap gap-y-3 gap-x-8 text-xs uppercase tracking-widest text-mutedText font-medium">
+            <span class="flex items-center">
+              <span class="text-yellowAccent mr-2">✔</span> Mon–Sat: 5:00 AM – 10:00 PM (Split)
+            </span>
+            <span class="flex items-center">
+              <span class="text-yellowAccent mr-2">✔</span> Near Pandit Ji Petrol Pump
+            </span>
+            <span class="flex items-center">
+              <span class="text-yellowAccent mr-2">✔</span> Wheelchair Accessible
+            </span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!-- 3. TRUST STRIP (Fact-Based) -->
+    <!-- ================================================== -->
+    <section class="bg-blackSecondary border-y border-blackBorder py-6">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-blackBorder/70">
+          
+          <div class="pt-3 md:pt-0">
+            <p class="font-oswald text-2xl lg:text-3xl font-bold text-yellowAccent">EST. 2020</p>
+            <p class="text-xs uppercase tracking-widest text-mutedText mt-1">Operational Since</p>
+          </div>
+
+          <div class="pt-3 md:pt-0">
+            <p class="font-oswald text-2xl lg:text-3xl font-bold text-white">GYM &amp; FITNESS</p>
+            <p class="text-xs uppercase tracking-widest text-mutedText mt-1">Strength &amp; Conditioning</p>
+          </div>
+
+          <div class="pt-3 md:pt-0">
+            <p class="font-oswald text-2xl lg:text-3xl font-bold text-white">PERSONAL TRAINER</p>
+            <p class="text-xs uppercase tracking-widest text-mutedText mt-1">Get Your Own Trainer</p>
+          </div>
+
+          <div class="pt-3 md:pt-0">
+            <p class="font-oswald text-2xl lg:text-3xl font-bold text-yellowAccent">WEIGHT GAIN</p>
+            <p class="text-xs uppercase tracking-widest text-mutedText mt-1">Structured Programme</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!-- 4. ABOUT SECTION -->
+    <!-- ================================================== -->
+    <section id="about" class="py-24 bg-blackPrimary">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-6 space-y-6">
+            <div class="inline-block border-l-2 border-yellowAccent pl-3">
+              <span class="text-xs font-mono uppercase tracking-widest text-yellowAccent">BUDAUN FITNESS</span>
+            </div>
+            
+            <h2 class="font-oswald text-4xl sm:text-5xl font-bold uppercase tracking-tight text-white leading-tight">
+              TRAIN WITH PURPOSE.<br />
+              <span class="text-yellowAccent">ESTABLISHED 2020.</span>
+            </h2>
+
+            <p class="text-base sm:text-lg text-mutedText leading-relaxed">
+              365 Fitness is a gym and fitness centre located on Station Road in Budaun, providing a focused environment for strength and fitness training.
+            </p>
+
+            <p class="text-sm sm:text-base text-mutedText leading-relaxed">
+              Founded in 2020 near Pandit Ji Petrol Pump, our gym offers members structured daily workout facilities, one-on-one personal trainer assistance, and a focused weight gain programme. We prioritize consistency, proper training etiquette, and an accessible training space equipped for everyday fitness enthusiasts.
+            </p>
+
+            <!-- Verified Pillars -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+              <div class="bg-blackCard p-4 border border-blackBorder">
+                <div class="text-yellowAccent font-oswald text-2xl font-bold">01</div>
+                <h3 class="font-oswald text-white uppercase text-base mt-1">Gym Training</h3>
+                <p class="text-xs text-mutedText mt-1">Full access strength &amp; functional floor.</p>
+              </div>
+              <div class="bg-blackCard p-4 border border-blackBorder">
+                <div class="text-yellowAccent font-oswald text-2xl font-bold">02</div>
+                <h3 class="font-oswald text-white uppercase text-base mt-1">Personal Trainer</h3>
+                <p class="text-xs text-mutedText mt-1">Dedicated coaching options available.</p>
+              </div>
+              <div class="bg-blackCard p-4 border border-blackBorder">
+                <div class="text-yellowAccent font-oswald text-2xl font-bold">03</div>
+                <h3 class="font-oswald text-white uppercase text-base mt-1">Weight Gain</h3>
+                <p class="text-xs text-mutedText mt-1">Goal-oriented mass &amp; strength framework.</p>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <a href="#location" class="inline-flex items-center text-sm font-oswald uppercase tracking-wider text-yellowAccent hover:underline">
+                View Gym Location &amp; Directions
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Visual Representation -->
+          <div class="lg:col-span-6 relative">
+            <div class="relative bg-blackSecondary border border-blackBorder p-2">
+              <img 
+                src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1200&auto=format&fit=crop" 
+                alt="Gym weights and training equipment in Budaun" 
+                class="w-full h-[450px] object-cover filter grayscale contrast-110"
+              />
+              <div class="absolute bottom-6 left-6 right-6 bg-blackPrimary/90 border-l-4 border-yellowAccent p-4 backdrop-blur-sm">
+                <p class="text-xs font-mono text-yellowAccent uppercase tracking-widest">Verified Facility Feature</p>
+                <p class="text-sm text-white font-medium mt-1">Wheelchair Accessible Entrance &amp; Exit available on premises.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!-- 5. SERVICES SECTION -->
+    <!-- ================================================== -->
+    <section id="services" class="py-24 bg-blackSecondary border-y border-blackBorder">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-xs font-mono uppercase tracking-widest text-yellowAccent">CORE OFFERINGS</span>
+          <h2 class="font-oswald text-4xl sm:text-5xl font-bold uppercase tracking-tight text-white mt-2">
+            TRAINING THAT FITS YOUR GOALS.
+          </h2>
+          <p class="text-mutedText mt-4 text-base sm:text-lg">
+            Straightforward fitness solutions supported by our Budaun facility. No gimmicks, just reliable training resources.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Service 1: Gym Training -->
+          <div class="bg-blackPrimary border border-blackBorder p-8 flex flex-col justify-between hover:border-yellowAccent/60 transition-all duration-300">
+            <div>
+              <div class="flex items-center justify-between">
+                <span class="font-oswald text-4xl font-bold text-yellowAccent">01</span>
+                <span class="text-xs font-mono uppercase px-2.5 py-1 bg-blackCard text-mutedText border border-blackBorder">Core Floor</span>
+              </div>
+              <h3 class="font-oswald text-2xl font-bold uppercase tracking-wide text-white mt-6">
+                GYM TRAINING
+              </h3>
+              <p class="text-mutedText text-sm sm:text-base mt-4 leading-relaxed">
+                Structured gym environment for regular strength, conditioning, and daily fitness training. Access a wide range of free weights, benches, and resistance machines designed for steady athletic development.
+              </p>
+              <ul class="mt-6 space-y-2.5 text-xs uppercase tracking-wider text-offWhite/80">
+                <li class="flex items-center"><span class="text-yellowAccent mr-2">▪</span> Strength &amp; Resistance Equipment</li>
+                <li class="flex items-center"><span class="text-yellowAccent mr-2">▪</span> Morning &amp; Evening Shifts</li>
+                <li class="flex items-center"><span class="text-yellowAccent mr-2">▪</span> Open 6 Days a Week</li>
+              </ul>
+            </div>
+            <div class="mt-8 pt-6 border-t border-blackBorder">
+              <a href="#contact" class="block text-center py-3 px-4 bg-blackCard hover:bg-yellowAccent hover:text-black text-white font-oswald text-sm font-semibold tracking-wider uppercase transition-colors">
+                ENQUIRE NOW
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 2: Personal Trainer -->
+          <div class="bg-blackPrimary border-2 border-yellowAccent/80 p-8 flex flex-col justify-between relative shadow-xl shadow-yellowAccent/5">
+            <div class="absolute -top-3 right-6 bg-yellowAccent text-black text-[11px] font-oswald font-bold uppercase tracking-wider px-3 py-0.5">
+              ONE-ON-ONE GUIDANCE
+            </div>
+            <div>
+              <div class="flex items-center justify-between">
+                <span class="font-oswald text-4xl font-bold text-yellowAccent">02</span>
+                <span class="text-xs font-mono uppercase px-2.5 py-1 bg-yellowAccent/10 text-yellowAccent border border-yellowAccent/30">Coaching</span>
+              </div>
+              <h3 class="font-oswald text-2xl font-bold uppercase tracking-wide text-white mt-6">
+                PERSONAL TRAINER
+              </h3>
+              <p class="text-mutedText text-sm sm:text-base mt-4 leading-relaxed">
+                For members looking for individual guidance, tailored form correction, and a more personalised training approach. Work with an experienced gym trainer directly on your individual mechanics and progression.
+              </p>
+              <ul class="mt-6 space-y-2.5 text-xs uppercase tracking-wider text-offWhite/80">
+                <li class="flex items-center"><span class="text-yellowAccent mr-2">▪</span> Form Check &amp; Lifting Technique</li>
+                <li class="flex items-center"><span class="text-yellowAccent mr-2">▪</span> Direct Routine Supervision</li>
+                <li class="flex items-center"><span class="text-yellowAccent mr-2">▪</span> Get Your Own Trainer Option</li>
+              </ul>
+            </div>
+            <div class="mt-8 pt-6 border-t border-blackBorder">
+              <a href="#contact" class="block text-center py-3 px-4 bg-yellowAccent text-black font-oswald text-sm font-bold tracking-wider uppercase hover:bg-yellowHover transition-colors">
+                ENQUIRE ABOUT PT
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 3: Weight Gain Programme -->
+          <div class="bg-blackPrimary border border-blackBorder p-8 flex flex-col justify-between hover:border-yellowAccent/60 transition-all duration-300">
+            <div>
+              <div class="flex items-center justify-between">
+                <span class="font-oswald text-4xl font-bold text-yellowAccent">03</span>
+                <span class="text-xs font-mono uppercase px-2.5 py-1 bg-blackCard text-mutedText border border-blackBorder">Specialized</span>
+              </div>
+              <h3 class="font-oswald text-2xl font-bold uppercase tracking-wide text-white mt-6">
+                WEIGHT GAIN PROGRAMME
+              </h3>
+              <p class="text-mutedText text-sm sm:text-base mt-4 leading-relaxed">
+                A dedicated option for individuals working toward healthy weight, mass, and strength goals. Focuses on progressive overload, compound exercises, and consistent training routines.
+              </p>
+              <ul class="mt-6 space-y-2.5 text-xs uppercase tracking-wider text-offWhite/80">
+                <li class="flex items-center"><span class="text-yellowAccent mr-2">▪</span> Progressive Strength Framework</li>
+                <li class="flex items-center"><span class="text-yellowAccent mr-2">▪</span> Muscle Building Focus</li>
+                <li class="flex items-center"><span class="text-yellowAccent mr-2">▪</span> Realistic &amp; Safe Progression</li>
+              </ul>
+            </div>
+            <div class="mt-8 pt-6 border-t border-blackBorder">
+              <a href="#contact" class="block text-center py-3 px-4 bg-blackCard hover:bg-yellowAccent hover:text-black text-white font-oswald text-sm font-semibold tracking-wider uppercase transition-colors">
+                ASK ABOUT PROGRAMME
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!-- 6. DEDICATED FEATURE: PERSONAL TRAINING -->
+    <!-- ================================================== -->
+    <section class="py-20 bg-blackPrimary relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-blackCard border border-blackBorder p-8 sm:p-12 lg:p-16">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            
+            <div class="lg:col-span-7 space-y-6">
+              <span class="text-xs font-mono uppercase tracking-widest text-yellowAccent">PERSONALIZED COACHING</span>
+              <h2 class="font-oswald text-4xl sm:text-5xl font-bold uppercase tracking-tight text-white leading-tight">
+                TRAIN WITH <span class="text-yellowAccent">DIRECTION.</span>
+              </h2>
+              <p class="text-mutedText text-base sm:text-lg leading-relaxed">
+                Looking for more personalised guidance? Explore the personal trainer option available at 365 Fitness. Whether you are stepping into a gym for the first time or breaking through a plateau, working directly with a trainer ensures every workout count.
+              </p>
+              
+              <div class="border-l-2 border-yellowAccent pl-4 py-1 text-sm text-offWhite font-medium">
+                Verified Service: "Personal Trainer / Get Your Own Trainer" available at Budaun branch.
+              </div>
+
+              <div class="pt-2">
+                <a href="#contact" class="inline-flex items-center bg-yellowAccent text-black font-oswald text-base font-bold tracking-wider uppercase px-7 py-3.5 hover:bg-yellowHover transition-colors">
+                  ENQUIRE ABOUT PERSONAL TRAINING
+                  <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="lg:col-span-5">
+              <div class="border border-blackBorder bg-blackSecondary p-2">
+                <img 
+                  src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=800&auto=format&fit=crop" 
+                  alt="Personal trainer supervising barbell exercise" 
+                  class="w-full h-80 object-cover filter grayscale contrast-125"
+                />
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!-- 7. DEDICATED FEATURE: WEIGHT GAIN PROGRAMME -->
+    <!-- ================================================== -->
+    <section class="py-20 bg-blackSecondary border-y border-blackBorder">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-5 order-2 lg:order-1">
+            <div class="border border-blackBorder bg-blackPrimary p-2">
+              <img 
+                src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?q=80&w=800&auto=format&fit=crop" 
+                alt="Strength training for weight and muscle gain" 
+                class="w-full h-80 object-cover filter grayscale contrast-125"
+              />
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 order-1 lg:order-2 space-y-6">
+            <span class="text-xs font-mono uppercase tracking-widest text-yellowAccent">STRUCTURED HYPERTROPHY</span>
+            <h2 class="font-oswald text-4xl sm:text-5xl font-bold uppercase tracking-tight text-white leading-tight">
+              BUILD SIZE. <span class="text-yellowAccent">BUILD STRENGTH.</span>
+            </h2>
+            <p class="text-mutedText text-base sm:text-lg leading-relaxed">
+              Gaining solid mass requires progressive resistance, proper lifting volume, and disciplined consistency. At 365 Fitness, our Weight Gain Programme provides the foundational exercise framework to support your mass building targets safely and methodically.
+            </p>
+
+            <div class="bg-blackPrimary border border-blackBorder p-4 text-xs text-mutedText">
+              <strong class="text-white uppercase font-oswald text-sm block mb-1">Responsible Training Policy:</strong>
+              We do not promote unrealistic short-term claims or guaranteed rapid transformations. Results depend on individual discipline, regular attendance, adequate rest, and proper nutrition.
+            </div>
+
+            <div class="pt-2">
+              <a href="#contact" class="inline-flex items-center border border-yellowAccent text-yellowAccent hover:bg-yellowAccent hover:text-black font-oswald text-base font-bold tracking-wider uppercase px-7 py-3.5 transition-colors">
+                ASK ABOUT THE PROGRAMME
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!-- 8. WHY 365 FITNESS (100% Verified Facts Only) -->
+    <!-- ================================================== -->
+    <section class="py-24 bg-blackPrimary">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-16">
+          <span class="text-xs font-mono uppercase tracking-widest text-yellowAccent">FACT-CHECKED ADVANTAGES</span>
+          <h2 class="font-oswald text-4xl sm:text-5xl font-bold uppercase tracking-tight text-white mt-2">
+            WHY TRAIN HERE?
+          </h2>
+          <p class="text-mutedText mt-4 text-base">
+            Verified features and factual benefits based on our Budaun listing.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          
+          <!-- 01 -->
+          <div class="bg-blackSecondary border border-blackBorder p-6 flex flex-col justify-between">
+            <div>
+              <span class="font-oswald text-3xl font-bold text-yellowAccent">01</span>
+              <h3 class="font-oswald text-lg font-bold uppercase text-white mt-4">ESTABLISHED SINCE 2020</h3>
+              <p class="text-xs text-mutedText mt-2 leading-relaxed">
+                Active fitness presence on Station Road in Budaun since 2020.
+              </p>
+            </div>
+          </div>
+
+          <!-- 02 -->
+          <div class="bg-blackSecondary border border-blackBorder p-6 flex flex-col justify-between">
+            <div>
+              <span class="font-oswald text-3xl font-bold text-yellowAccent">02</span>
+              <h3 class="font-oswald text-lg font-bold uppercase text-white mt-4">PERSONAL TRAINER OPTION</h3>
+              <p class="text-xs text-mutedText mt-2 leading-relaxed">
+                Personalized training support for individual goals and exercise mechanics.
+              </p>
+            </div>
+          </div>
+
+          <!-- 03 -->
+          <div class="bg-blackSecondary border border-blackBorder p-6 flex flex-col justify-between">
+            <div>
+              <span class="font-oswald text-3xl font-bold text-yellowAccent">03</span>
+              <h3 class="font-oswald text-lg font-bold uppercase text-white mt-4">WEIGHT GAIN PROGRAMME</h3>
+              <p class="text-xs text-mutedText mt-2 leading-relaxed">
+                Dedicated training framework specifically tailored for building strength and mass.
+              </p>
+            </div>
+          </div>
+
+          <!-- 04 -->
+          <div class="bg-blackSecondary border border-blackBorder p-6 flex flex-col justify-between">
+            <div>
+              <span class="font-oswald text-3xl font-bold text-yellowAccent">04</span>
+              <h3 class="font-oswald text-lg font-bold uppercase text-white mt-4">STATION ROAD LOCATION</h3>
+              <p class="text-xs text-mutedText mt-2 leading-relaxed">
+                Centrally situated right near Pandit Ji Petrol Pump in Budaun.
+              </p>
+            </div>
+          </div>
+
+          <!-- 05 -->
+          <div class="bg-blackSecondary border border-yellowAccent/50 p-6 flex flex-col justify-between">
+            <div>
+              <span class="font-oswald text-3xl font-bold text-yellowAccent">05</span>
+              <h3 class="font-oswald text-lg font-bold uppercase text-white mt-4">WHEELCHAIR ACCESSIBLE</h3>
+              <p class="text-xs text-mutedText mt-2 leading-relaxed">
+                Verified wheelchair accessible entrance and exit on gym premises.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!-- 9. OPENING HOURS (Source-Derived) -->
+    <!-- ================================================== -->
+    <section id="schedule" class="py-24 bg-blackSecondary border-y border-blackBorder">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-5 space-y-6">
+            <span class="text-xs font-mono uppercase tracking-widest text-yellowAccent">DAILY TIMINGS</span>
+            <h2 class="font-oswald text-4xl sm:text-5xl font-bold uppercase tracking-tight text-white">
+              TRAIN ON YOUR <span class="text-yellowAccent">SCHEDULE.</span>
+            </h2>
+            <p class="text-mutedText text-base leading-relaxed">
+              We operate convenient split shifts Monday through Saturday, allowing you to train before work or unwind in the evening. Sunday is reserved for recovery.
+            </p>
+
+            <div class="bg-blackPrimary border-l-4 border-yellowAccent p-4 text-xs text-mutedText">
+              <p class="font-semibold text-white uppercase font-oswald text-sm">Listing Source Reference:</p>
+              <p class="mt-1">Hours sourced from current listing records. Schedule can be adjusted as updated by gym management.</p>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7">
+            <div class="bg-blackPrimary border border-blackBorder divide-y divide-blackBorder/80">
+              
+              <!-- Monday -->
+              <div class="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-blackCard transition-colors">
+                <span class="font-oswald text-lg font-bold uppercase tracking-wider text-white">MONDAY</span>
+                <div class="text-sm font-mono text-mutedText flex items-center space-x-3">
+                  <span class="text-yellowAccent font-semibold">5:00 AM – 10:00 AM</span>
+                  <span class="text-zinc-600">|</span>
+                  <span class="text-yellowAccent font-semibold">3:00 PM – 10:00 PM</span>
+                </div>
+              </div>
+
+              <!-- Tuesday -->
+              <div class="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-blackCard transition-colors">
+                <span class="font-oswald text-lg font-bold uppercase tracking-wider text-white">TUESDAY</span>
+                <div class="text-sm font-mono text-mutedText flex items-center space-x-3">
+                  <span class="text-yellowAccent font-semibold">5:00 AM – 10:00 AM</span>
+                  <span class="text-zinc-600">|</span>
+                  <span class="text-yellowAccent font-semibold">3:00 PM – 10:00 PM</span>
+                </div>
+              </div>
+
+              <!-- Wednesday -->
+              <div class="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-blackCard transition-colors">
+                <span class="font-oswald text-lg font-bold uppercase tracking-wider text-white">WEDNESDAY</span>
+                <div class="text-sm font-mono text-mutedText flex items-center space-x-3">
+                  <span class="text-yellowAccent font-semibold">5:00 AM – 10:00 AM</span>
+                  <span class="text-zinc-600">|</span>
+                  <span class="text-yellowAccent font-semibold">3:00 PM – 10:00 PM</span>
+                </div>
+              </div>
+
+              <!-- Thursday -->
+              <div class="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-blackCard transition-colors">
+                <span class="font-oswald text-lg font-bold uppercase tracking-wider text-white">THURSDAY</span>
+                <div class="text-sm font-mono text-mutedText flex items-center space-x-3">
+                  <span class="text-yellowAccent font-semibold">5:00 AM – 10:00 AM</span>
+                  <span class="text-zinc-600">|</span>
+                  <span class="text-yellowAccent font-semibold">3:00 PM – 10:00 PM</span>
+                </div>
+              </div>
+
+              <!-- Friday -->
+              <div class="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-blackCard transition-colors">
+                <span class="font-oswald text-lg font-bold uppercase tracking-wider text-white">FRIDAY</span>
+                <div class="text-sm font-mono text-mutedText flex items-center space-x-3">
+                  <span class="text-yellowAccent font-semibold">5:00 AM – 10:00 AM</span>
+                  <span class="text-zinc-600">|</span>
+                  <span class="text-yellowAccent font-semibold">3:00 PM – 10:00 PM</span>
+                </div>
+              </div>
+
+              <!-- Saturday -->
+              <div class="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-blackCard transition-colors">
+                <span class="font-oswald text-lg font-bold uppercase tracking-wider text-white">SATURDAY</span>
+                <div class="text-sm font-mono text-mutedText flex items-center space-x-3">
+                  <span class="text-yellowAccent font-semibold">5:00 AM – 10:00 AM</span>
+                  <span class="text-zinc-600">|</span>
+                  <span class="text-yellowAccent font-semibold">3:00 PM – 10:00 PM</span>
+                </div>
+              </div>
+
+              <!-- Sunday -->
+              <div class="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-blackCard/50">
+                <span class="font-oswald text-lg font-bold uppercase tracking-wider text-mutedText">SUNDAY</span>
+                <span class="text-sm font-mono uppercase font-semibold text-red-400">CLOSED (RECOVERY DAY)</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!-- 10. SOCIAL PROOF (Strict Justdial Attribution) -->
+    <!-- ================================================== -->
+    <section id="reviews" class="py-24 bg-blackPrimary">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="bg-blackSecondary border border-blackBorder p-8 sm:p-12 text-center max-w-4xl mx-auto">
+          <span class="text-xs font-mono uppercase tracking-widest text-yellowAccent">SOURCE-DERIVED RATING</span>
+          <h2 class="font-oswald text-3xl sm:text-4xl font-bold uppercase text-white mt-2">
+            WHAT MEMBERS SAY
+          </h2>
+          
+          <!-- Rating highlight -->
+          <div class="my-8 inline-block bg-blackPrimary border border-yellowAccent/40 p-8">
+            <div class="font-oswald text-6xl sm:text-7xl font-bold text-yellowAccent leading-none">
+              4.8 <span class="text-3xl text-mutedText font-normal">/ 5</span>
+            </div>
+            
+            <div class="flex items-center justify-center space-x-1 my-3 text-yellowAccent text-xl">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span class="text-yellowAccent/80">★</span>
+            </div>
+            
+            <p class="text-sm uppercase tracking-widest font-mono text-white font-semibold">
+              BASED ON 116 RATINGS
+            </p>
+            
+            <div class="mt-3 pt-3 border-t border-blackBorder text-xs text-mutedText font-mono">
+              SOURCE: <span class="text-yellowAccent font-semibold">JUSTDIAL VERIFIED LISTING</span>
+            </div>
+          </div>
+
+          <p class="text-xs sm:text-sm text-mutedText max-w-xl mx-auto leading-relaxed">
+            *Rating and total review figures are derived directly from the supplied Justdial business listing. Figures are subject to continuous member updates and can be refreshed by the gym owner.
+          </p>
+
+          <div class="mt-6">
+            <a href="#contact" class="inline-block border border-blackBorder hover:border-yellowAccent text-white hover:text-yellowAccent px-6 py-2.5 text-xs uppercase tracking-wider font-oswald transition-colors">
+              Submit Member Feedback / Enquiry
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!-- 11. PHOTO GALLERY (Strength Training Visuals) -->
+    <!-- ================================================== -->
+    <section id="gallery" class="py-24 bg-blackSecondary border-t border-blackBorder">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div>
+            <span class="text-xs font-mono uppercase tracking-widest text-yellowAccent">THE TRAINING SPACE</span>
+            <h2 class="font-oswald text-4xl sm:text-5xl font-bold uppercase tracking-tight text-white mt-2">
+              EQUIPMENT &amp; ENVIRONMENT
+            </h2>
+          </div>
+          <p class="text-xs font-mono uppercase tracking-wider text-mutedText mt-4 md:mt-0">
+            [Authentic Training Imagery Demonstration]
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <div class="group relative overflow-hidden bg-blackPrimary border border-blackBorder">
+            <img 
+              src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=800&auto=format&fit=crop" 
+              alt="Free weights and dumbbell rack" 
+              class="w-full h-72 object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-300"
+            />
+            <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black to-transparent text-xs font-oswald uppercase tracking-wider text-white">
+              Free Weights &amp; Dumbbells
+            </div>
+          </div>
+
+          <div class="group relative overflow-hidden bg-blackPrimary border border-blackBorder">
+            <img 
+              src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=800&auto=format&fit=crop" 
+              alt="Barbell bench press setup" 
+              class="w-full h-72 object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-300"
+            />
+            <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black to-transparent text-xs font-oswald uppercase tracking-wider text-white">
+              Strength &amp; Bench Stations
+            </div>
+          </div>
+
+          <div class="group relative overflow-hidden bg-blackPrimary border border-blackBorder">
+            <img 
+              src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=800&auto=format&fit=crop" 
+              alt="Heavy barbell plates" 
+              class="w-full h-72 object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-300"
+            />
+            <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black to-transparent text-xs font-oswald uppercase tracking-wider text-white">
+              Weight Gain &amp; Hypertrophy Area
+            </div>
+          </div>
+
+          <div class="group relative overflow-hidden bg-blackPrimary border border-blackBorder">
+            <img 
+              src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?q=80&w=800&auto=format&fit=crop" 
+              alt="Functional training barbell pull" 
+              class="w-full h-72 object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-300"
+            />
+            <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black to-transparent text-xs font-oswald uppercase tracking-wider text-white">
+              Heavy Compound Lifts
+            </div>
+          </div>
+
+          <div class="group relative overflow-hidden bg-blackPrimary border border-blackBorder">
+            <img 
+              src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?q=80&w=800&auto=format&fit=crop" 
+              alt="Personal training session" 
+              class="w-full h-72 object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-300"
+            />
+            <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black to-transparent text-xs font-oswald uppercase tracking-wider text-white">
+              Dedicated Trainer Guidance
+            </div>
+          </div>
+
+          <div class="group relative overflow-hidden bg-blackPrimary border border-blackBorder">
+            <img 
+              src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=800&auto=format&fit=crop" 
+              alt="Gym floor and conditioning equipment" 
+              class="w-full h-72 object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-300"
+            />
+            <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black to-transparent text-xs font-oswald uppercase tracking-wider text-white">
+              Structured Workout Environment
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!-- 12. LOCATION & MAP SECTION -->
+    <!-- ================================================== -->
+    <section id="location" class="py-24 bg-blackPrimary">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-6 space-y-6">
+            <span class="text-xs font-mono uppercase tracking-widest text-yellowAccent">HOW TO FIND US</span>
+            <h2 class="font-oswald text-4xl sm:text-5xl font-bold uppercase tracking-tight text-white leading-tight">
+              FIND <span class="text-yellowAccent">365 FITNESS.</span>
+            </h2>
+
+            <div class="bg-blackSecondary border border-blackBorder p-6 space-y-4">
+              <div>
+                <h3 class="font-oswald text-2xl font-bold text-white uppercase">365 FITNESS</h3>
+                <p class="text-yellowAccent text-sm font-mono mt-0.5">Gym / Fitness Centre</p>
+              </div>
+
+              <div class="border-t border-blackBorder pt-4 space-y-2 text-sm text-offWhite leading-relaxed">
+                <p class="flex items-start">
+                  <span class="text-yellowAccent font-bold mr-3 mt-0.5">📍</span>
+                  <span>Pandit Ji Petrol Pump, Station Road,<br />Budaun – 243601, Uttar Pradesh, India</span>
+                </p>
+                <p class="flex items-start text-mutedText text-xs pt-1">
+                  <span class="text-yellowAccent font-bold mr-3">📌</span>
+                  <span>Landmark Reference: Near Pandit Ji Petrol Pump</span>
+                </p>
+                <p class="flex items-start text-mutedText text-xs">
+                  <span class="text-yellowAccent font-bold mr-3">♿</span>
+                  <span>Amenity: Wheelchair Accessible Entrance &amp; Exit</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+              <!-- Google Maps Directions Link using exact verified query -->
+              <a 
+                href="https://www.google.com/maps/search/?api=1&query=365+Fitness+Pandit+Ji+Petrol+Pump+Station+Road+Budaun" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="inline-flex items-center justify-center bg-yellowAccent text-black font-oswald text-base font-bold tracking-wider uppercase px-7 py-3.5 hover:bg-yellowHover transition-colors"
+              >
+                GET DIRECTIONS
+                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+
+              <a 
+                href="#contact" 
+                class="inline-flex items-center justify-center border border-white/30 text-white hover:border-yellowAccent hover:text-yellowAccent font-oswald text-base font-semibold tracking-wider uppercase px-7 py-3.5 transition-colors"
+              >
+                CALL / ENQUIRE
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive Map Container -->
+          <div class="lg:col-span-6">
+            <div class="bg-blackSecondary border border-blackBorder p-2 relative">
+              <iframe 
+                title="365 Fitness Location Budaun"
+                src="https://maps.google.com/maps?q=Pandit%20Ji%20Petrol%20Pump,%20Station%20Road,%20Budaun&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                width="100%" 
+                height="380" 
+                style="border:0; filter: grayscale(1) invert(0.9) contrast(1.2);" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                class="w-full">
+              </iframe>
+              <div class="absolute bottom-5 right-5 bg-blackPrimary/90 border border-blackBorder px-3 py-1.5 text-[11px] font-mono text-mutedText">
+                Station Road • Budaun
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!-- 13. CONTACT SECTION -->
+    <!-- ================================================== -->
+    <section id="contact" class="py-24 bg-blackSecondary border-y border-blackBorder">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <div class="lg:col-span-5 space-y-6">
+            <span class="text-xs font-mono uppercase tracking-widest text-yellowAccent">GET STARTED</span>
+            <h2 class="font-oswald text-4xl sm:text-5xl font-bold uppercase tracking-tight text-white leading-tight">
+              READY TO <span class="text-yellowAccent">START?</span>
+            </h2>
+            <p class="text-mutedText text-base leading-relaxed">
+              Have questions about gym membership, personal training, or the weight gain programme? Get in touch with 365 Fitness directly or submit your query below.
+            </p>
+
+            <!-- Editable Phone Placeholder Notice -->
+            <div class="bg-blackPrimary border border-blackBorder p-5 space-y-3">
+              <div class="text-xs uppercase tracking-widest font-mono text-yellowAccent font-semibold">Direct Contact:</div>
+              <div class="flex items-center space-x-3 text-white">
+                <span class="w-8 h-8 bg-yellowAccent text-black flex items-center justify-center font-bold text-sm">📞</span>
+                <div>
+                  <p class="text-base font-oswald tracking-wider">[+91 PHONE NUMBER]</p>
+                  <p class="text-[11px] text-mutedText">*Editable placeholder for gym owner contact</p>
+                </div>
+              </div>
+              <div class="pt-2 border-t border-blackBorder/60 text-xs text-mutedText">
+                Walk-ins welcome during operational hours (5:00–10:00 AM &amp; 3:00–10:00 PM).
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7">
+            <div class="bg-blackPrimary border border-blackBorder p-6 sm:p-10">
+              <form id="enquiryForm" class="space-y-5" onsubmit="event.preventDefault(); handleFormSubmit();">
+                
+                <div>
+                  <label for="name" class="block text-xs uppercase font-oswald tracking-wider text-mutedText mb-1.5">Your Full Name *</label>
+                  <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    required 
+                    placeholder="e.g. Rahul Sharma" 
+                    class="w-full bg-blackSecondary border border-blackBorder px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-yellowAccent text-sm transition-colors"
+                  />
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <label for="phone" class="block text-xs uppercase font-oswald tracking-wider text-mutedText mb-1.5">Phone Number *</label>
+                    <input 
+                      type="tel" 
+                      id="phone" 
+                      name="phone" 
+                      required 
+                      placeholder="e.g. +91 98765 43210" 
+                      class="w-full bg-blackSecondary border border-blackBorder px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-yellowAccent text-sm transition-colors"
+                    />
+                  </div>
+                  <div>
+                    <label for="email" class="block text-xs uppercase font-oswald tracking-wider text-mutedText mb-1.5">Email Address (Optional)</label>
+                    <input 
+                      type="email" 
+                      id="email" 
+                      name="email" 
+                      placeholder="name@example.com" 
+                      class="w-full bg-blackSecondary border border-blackBorder px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-yellowAccent text-sm transition-colors"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="serviceInterest" class="block text-xs uppercase font-oswald tracking-wider text-mutedText mb-1.5">Programme of Interest</label>
+                  <select 
+                    id="serviceInterest" 
+                    name="serviceInterest" 
+                    class="w-full bg-blackSecondary border border-blackBorder px-4 py-3 text-white focus:outline-none focus:border-yellowAccent text-sm transition-colors"
+                  >
+                    <option value="Gym Training">Gym Training Membership</option>
+                    <option value="Personal Trainer">Personal Trainer / Get Your Own Trainer</option>
+                    <option value="Weight Gain Programme">Weight Gain Programme</option>
+                    <option value="General Enquiry">General Gym Enquiry</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="message" class="block text-xs uppercase font-oswald tracking-wider text-mutedText mb-1.5">Message / Questions</label>
+                  <textarea 
+                    id="message" 
+                    name="message" 
+                    rows="4" 
+                    placeholder="Write your enquiry regarding gym timings, training options, or fees..." 
+                    class="w-full bg-blackSecondary border border-blackBorder px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-yellowAccent text-sm transition-colors"
+                  ></textarea>
+                </div>
+
+                <button 
+                  type="submit" 
+                  class="w-full bg-yellowAccent text-black font-oswald text-base font-bold tracking-wider uppercase py-4 hover:bg-yellowHover transition-colors shadow-lg shadow-yellowAccent/10"
+                >
+                  SEND ENQUIRY
+                </button>
+
+                <div id="formSuccess" class="hidden p-4 bg-yellowAccent/10 border border-yellowAccent text-yellowAccent text-center text-sm font-medium">
+                  Thank you! Your enquiry has been recorded. Our team at Station Road, Budaun will connect with you soon.
+                </div>
+
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================== -->
+    <!-- 14. CONVENIENT PAYMENT OPTIONS (Strictly Verified) -->
+    <!-- ================================================== -->
+    <section class="py-12 bg-blackPrimary">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6 border border-blackBorder bg-blackSecondary p-6">
+          <div>
+            <h3 class="font-oswald text-lg font-bold uppercase tracking-wider text-white">CONVENIENT PAYMENT OPTIONS</h3>
+            <p class="text-xs text-mutedText mt-0.5">Accepted payment methods for memberships and training packages at 365 Fitness.</p>
+          </div>
+          <div class="flex flex-wrap items-center gap-3">
+            <span class="px-3.5 py-1.5 bg-blackPrimary border border-blackBorder text-xs font-mono font-semibold uppercase text-white">VISA</span>
+            <span class="px-3.5 py-1.5 bg-blackPrimary border border-blackBorder text-xs font-mono font-semibold uppercase text-white">MASTERCARD</span>
+            <span class="px-3.5 py-1.5 bg-blackPrimary border border-blackBorder text-xs font-mono font-semibold uppercase text-yellowAccent">RUPAY</span>
+            <span class="px-3.5 py-1.5 bg-blackPrimary border border-yellowAccent/40 text-xs font-mono font-bold uppercase text-yellowAccent">UPI</span>
+            <span class="px-3.5 py-1.5 bg-blackPrimary border border-blackBorder text-xs font-mono font-semibold uppercase text-white">CASH</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================================================== -->
+  <!-- 15. FOOTER -->
+  <!-- ================================================== -->
+  <footer class="bg-blackPrimary border-t border-blackBorder pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-blackBorder">
+        
+        <!-- Col 1: Identity -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="flex items-center space-x-2">
+            <div class="w-8 h-8 bg-yellowAccent text-black flex items-center justify-center font-oswald text-lg font-bold">
+              365
+            </div>
+            <span class="font-oswald text-2xl tracking-wider font-bold text-white uppercase">
+              365 FITNESS
+            </span>
+          </div>
+          <p class="text-xs font-mono uppercase text-yellowAccent tracking-wider">Gym &amp; Fitness Centre • Budaun</p>
+          <p class="text-xs text-mutedText leading-relaxed max-w-sm">
+            Pandit Ji Petrol Pump, Station Road, Budaun – 243601, Uttar Pradesh, India.
+          </p>
+          <p class="text-xs text-mutedText">
+            Wheelchair Accessible Entrance &amp; Exit available.
+          </p>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-oswald text-sm font-bold uppercase tracking-wider text-white">NAVIGATION</h4>
+          <ul class="space-y-2 text-xs uppercase tracking-wider text-mutedText">
+            <li><a href="#hero" class="hover:text-yellowAccent transition-colors">Home</a></li>
+            <li><a href="#about" class="hover:text-yellowAccent transition-colors">About</a></li>
+            <li><a href="#services" class="hover:text-yellowAccent transition-colors">Training &amp; Services</a></li>
+            <li><a href="#gallery" class="hover:text-yellowAccent transition-colors">Gallery</a></li>
+            <li><a href="#reviews" class="hover:text-yellowAccent transition-colors">Reviews</a></li>
+            <li><a href="#location" class="hover:text-yellowAccent transition-colors">Location</a></li>
+            <li><a href="#contact" class="hover:text-yellowAccent transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Business Services -->
+        <div class="lg:col-span-4 space-y-3">
+          <h4 class="font-oswald text-sm font-bold uppercase tracking-wider text-white">VERIFIED SERVICES</h4>
+          <ul class="space-y-2 text-xs uppercase tracking-wider text-mutedText">
+            <li>Gym Training</li>
+            <li>Personal Trainer / Get Your Own Trainer</li>
+            <li>Weight Gain Programme</li>
+            <li>Split Shifts (Mon–Sat: 5–10 AM &amp; 3–10 PM)</li>
+            <li>Payment: Visa, Mastercard, RuPay, UPI, Cash</li>
+          </ul>
+          <div class="pt-2">
+            <a href="#contact" class="inline-block bg-yellowAccent text-black font-oswald text-xs uppercase font-bold tracking-wider px-4 py-2 hover:bg-yellowHover transition-colors">
+              ENQUIRE NOW
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-mutedText font-mono gap-4">
+        <p>© 2026 365 Fitness. All rights reserved.</p>
+        <p class="text-zinc-600 text-[11px]">Budaun, Uttar Pradesh – 243601</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================================================== -->
+  <!-- 16. MOBILE STICKY ACTION BAR -->
+  <!-- ================================================== -->
+  <div class="fixed bottom-0 inset-x-0 z-50 bg-[#0A0A0A]/95 border-t border-blackBorder py-2.5 px-3 flex md:hidden items-center justify-between gap-2 backdrop-blur-lg">
+    
+    <!-- Action 1: Call -->
+    <a href="tel:" class="flex-1 flex flex-col items-center justify-center py-1.5 px-2 bg-blackSecondary border border-blackBorder text-white rounded active:scale-95 transition-transform">
+      <span class="text-sm">📞</span>
+      <span class="text-[10px] uppercase font-oswald tracking-wider font-semibold mt-0.5">CALL</span>
+    </a>
+
+    <!-- Action 2: Get Directions -->
+    <a 
+      href="https://www.google.com/maps/search/?api=1&query=365+Fitness+Pandit+Ji+Petrol+Pump+Station+Road+Budaun" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      class="flex-1 flex flex-col items-center justify-center py-1.5 px-2 bg-blackSecondary border border-blackBorder text-white rounded active:scale-95 transition-transform"
+    >
+      <span class="text-sm">📍</span>
+      <span class="text-[10px] uppercase font-oswald tracking-wider font-semibold mt-0.5">DIRECTIONS</span>
+    </a>
+
+    <!-- Action 3: Enquire (Primary Yellow) -->
+    <a href="#contact" class="flex-1 flex flex-col items-center justify-center py-1.5 px-2 bg-yellowAccent text-black font-oswald tracking-wider rounded font-bold active:scale-95 transition-transform">
+      <span class="text-sm">✉️</span>
+      <span class="text-[10px] uppercase font-bold mt-0.5">ENQUIRE</span>
+    </a>
+
+  </div>
+
+  <!-- JavaScript for Interactions -->
+  <script>
+    // Mobile Navigation Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const burgerIcon = document.getElementById('burgerIcon');
+    const closeIcon = document.getElementById('closeIcon');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const isExpanded = mobileMenu.classList.toggle('hidden');
+      burgerIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    });
+
+    // Close mobile nav on anchor click
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        burgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      });
+    });
+
+    // Handle Contact Form Submission
+    function handleFormSubmit() {
+      const formSuccess = document.getElementById('formSuccess');
+      formSuccess.classList.remove('hidden');
+      document.getElementById('name').value = '';
+      document.getElementById('phone').value = '';
+      const emailField = document.getElementById('email');
+      if (emailField) emailField.value = '';
+      const msgField = document.getElementById('message');
+      if (msgField) msgField.value = '';
+
+      setTimeout(() => {
+        formSuccess.classList.add('hidden');
+      }, 7000);
+    }
+  </script>
+</body>
+</html>
